@@ -1,0 +1,23 @@
+{
+  "name": "frontendtest",
+  "version": "1.0.0",
+  "description": "frontend test for Marfeel",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meta103/FrontendTest.git"
+  },
+  "author": "Marcos Tagliabue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meta103/FrontendTest/issues"
+  },
+  "homepage": "https://github.com/meta103/FrontendTest#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
