@@ -1,5 +1,15 @@
+$colors: (
+  body-background-grey: #F0F0F0,
+  purewhite: #FFFFFF,
+  dark-grey: #8C8C8C,
+  ligth-grey: #D9D9D9,
+  pureblack: #000000,
+  error-pink: #F9DEDD,
+  error-red: #951C2B,
+);
+
 body{
-  background-color: #F0F0F0;
+  background-color: map-get($colors, body-background-grey);
   font-family: Arial;
 }
 
@@ -7,8 +17,8 @@ body{
   margin:0 auto;
   max-height: 60vh;
   padding: 5vh;
-  background-color: white;
-  box-shadow: 10px 15px 30px 5px grey;
+  background-color: map-get($colors, purewhite);
+  box-shadow: 10px 15px 30px 5px map-get($colors, dark-grey);
   border-radius: 15px;
   width: 50vh;
   overflow: scroll;
@@ -24,14 +34,14 @@ body{
   width: 80%;
   padding: 8px;
   border-radius: 5px;
-  border: 1px solid #D9D9D9;
+  border: 1px solid map-get($colors, ligth-grey);
   margin-right: 6px;
 }
 
 #button{
   padding: 6px 8px;
   font-weight: 600;
-  border: 1px solid #D9D9D9;
+  border: 1px solid map-get($colors, ligth-grey);
 }
 
 
@@ -48,10 +58,10 @@ body{
 .avatar-container{
   width: 120px;
   height: 120px;
-}
-
-.avatar-container img {
-  width: 100%;  
+  
+  img {
+    width: 100%;  
+  }
 }
 
 .user-details-container{
@@ -81,13 +91,13 @@ body{
 /* REPOS */
 .repo-title-section{
   padding-bottom: 10px;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid map-get($colors, pureblack);
 }
 
 .repo-container{
   display: flex;
   width: 100%;
-  border-bottom: 1px solid darkgrey;
+  border-bottom: 1px solid map-get($colors, dark-grey);
 }
 
 .repo-details-container{
@@ -95,22 +105,22 @@ body{
   display: flex;
   flex-direction: row;
   align-items: center;
-}
 
-.repo-details-container p{
-  margin-left: 10px;
-}
+  p{
+    margin-left: 10px;
+  }
 
-.repo-details-container i{
-  margin-left: 5px;
+  i{
+    margin-left: 5px;
+  }
 }
 
 /* error message */
 .error-message{
   margin-top: 15px;
-  background-color: #F9DEDE;
-  color : rgb(209, 77, 77);
-  padding: 20px;
+  background-color: map-get($colors, error-pink);
+  border: 1px solid map-get($colors, error-red);
+  color: map-get($colors, error-red);
   border-radius: 5px;
-  border: 1px solid rgb(209, 77, 77)
+  padding: 15px;
 }

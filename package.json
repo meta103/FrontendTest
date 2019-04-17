@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,6 @@
     "url": "https://github.com/meta103/FrontendTest/issues"
   },
   "homepage": "https://github.com/meta103/FrontendTest#readme",
-  "dependencies": {
-    "jasmine": "^3.4.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
@@ -27,6 +25,7 @@
     "css-loader": "^2.1.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.7.1",
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
