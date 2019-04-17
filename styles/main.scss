@@ -97,13 +97,6 @@ body{
   align-items: center;
 }
 
-/* .repo__forks{
-  justify-content: flex-end;
-  display: flex;
-  align-items: center;
-  margin: 10px;
-} */
-
 .repo-details-container p{
   margin-left: 10px;
 }
@@ -112,9 +105,9 @@ body{
   margin-left: 5px;
 }
 
-
 /* error message */
-.error__message{
+.error-message{
+  margin-top: 15px;
   background-color: #F9DEDE;
   color : rgb(209, 77, 77);
   padding: 20px;
