@@ -33,28 +33,28 @@ searchButton.addEventListener("click", async () => {
 
 /* Handles creation of html tags to show user details */
 const renderUserDetails = ({ userDetails }) => {
-  //Divs
+  //User container
   const userContainer = handleCreateTag("div", container);
-  const detailsContainer = handleCreateTag("div", userContainer);
-  const avatarContainer = handleCreateTag("div", userContainer);
-
-  //Tags
-  const avatar = handleCreateTag("img", avatarContainer);
-  const username = handleCreateTag("h1", detailsContainer);
-  const name = handleCreateTag("h2", detailsContainer);
-  const bio = handleCreateTag("P", detailsContainer);
-
-  //Properties
   userContainer.className = "user-container";
+
+  //User details
+  const detailsContainer = handleCreateTag("div", userContainer);
   detailsContainer.className = "user-details-container";
-  avatarContainer.className = "avatar-container";
-  avatar.src = userDetails.avatar_url;
+  const username = handleCreateTag("h1", detailsContainer);
   username.innerHTML = `@${userDetails.login}`;
   username.className = "username";
+  const name = handleCreateTag("h2", detailsContainer);
   name.innerHTML = userDetails.name;
   name.className = "name"
+  const bio = handleCreateTag("P", detailsContainer);
   bio.innerHTML = userDetails.bio;
   bio.className = "bio";
+
+  //Avatar
+  const avatarContainer = handleCreateTag("div", userContainer);
+  avatarContainer.className = "avatar-container";
+  const avatar = handleCreateTag("img", avatarContainer);
+  avatar.src = userDetails.avatar_url;
 };
 
 /* Handles creation of html tags to show user's repos */
